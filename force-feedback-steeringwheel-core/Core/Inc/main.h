@@ -49,16 +49,29 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+void STEPPER_Enable();
+void STEPPER_Disable();
+void STEPPER_Clockwise();
+void STEPPER_CounterClockwise();
+void STEPPER_Step();
+float STEPPER_ReadAngle();
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
 #define LED_1_Pin GPIO_PIN_13
 #define LED_1_GPIO_Port GPIOC
+#define BUT_1_Pin GPIO_PIN_14
+#define BUT_1_GPIO_Port GPIOC
+#define STEP_DIR_Pin GPIO_PIN_15
+#define STEP_DIR_GPIO_Port GPIOC
+#define STEP_ENABLE_Pin GPIO_PIN_5
+#define STEP_ENABLE_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
